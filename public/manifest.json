@@ -1,0 +1,26 @@
+{
+    "name": "GitHub Bork Bork Bork",
+    "description": "Replaces the 'Fork' button with a 'Bork' button on GitHub.",
+    "version": "1.0",
+    "icons": {
+        "16": "images/bork-16.png",
+        "32": "images/bork-32.png",
+        "48": "images/bork-48.png",
+        "128": "images/bork-128.png"
+    },
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "borkify.js"
+            ],
+            "matches": [
+                "https://github.com/*"
+            ]
+        }
+    ]
+}

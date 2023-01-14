@@ -1,0 +1,29 @@
+{
+  "name": "github-bork-extension",
+  "version": "1.0.0",
+  "description": "Chuonges zee-a furk buottun tu burk",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.js --mode production ",
+    "dev": "webpack --config webpack/webpack.config.js --mode production --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugoabernier/github-bork-extension.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugoabernier/github-bork-extension/issues"
+  },
+  "homepage": "https://github.com/hugoabernier/github-bork-extension#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.208",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
