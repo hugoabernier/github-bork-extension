@@ -10,8 +10,10 @@
     },
     "manifest_version": 3,
     "permissions": [
-        "activeTab",
-        "scripting"
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://github.com/*"
     ],
     "content_scripts": [
         {
