@@ -6,7 +6,7 @@ module.exports = {
         borkify: path.resolve(__dirname, "..", "src", "borkify.ts"),
     },
     output: {
-        path: path.join(__dirname, "../dist"),
+        path: path.join(__dirname, "../dist/github-bork-extension"),
         filename: "[name].js",
     },
     resolve: {

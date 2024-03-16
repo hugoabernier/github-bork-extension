@@ -17,3 +17,39 @@ if (forkButton)
 //         forkButton.replaceChild(forkButtonSVG, borkSVG);
 //     }
 }
+
+// See if we're in the "/pull/" page or /issues/ page
+if (window.location.pathname.includes("/pull/") || window.location.pathname.includes("/issues/")) {
+    // Bind to changes to the new comment textarea
+    const textarea = document.getElementById('new_comment_field') as HTMLTextAreaElement;
+    console.log(textarea);
+
+    if (textarea) {
+        textarea.addEventListener('change', (event) => {
+            // Get the author of the comment
+
+            // We don't want to use an API or anything, so we'll just look for the author in the DOM
+            const timelineCommentHeader = document.querySelector('.timeline-comment-header');
+            let authorText = '';
+
+            if (timelineCommentHeader) {
+                const author = timelineCommentHeader.querySelector('.author');
+                if (author) {
+                    authorText = author.textContent || '';
+                }
+            }
+
+            if (authorText && authorText.length > 0) {
+
+            // Get the current value of the textarea
+            const currentValue = textarea.value;
+
+            // Replace occurrences of "{author}" with authorText
+            const newValue = currentValue.replace(/{author}/g, `@${authorText}`);
+
+            // Set the new value of the textarea
+            textarea.value = newValue;
+            }
+        });
+    }
+}
