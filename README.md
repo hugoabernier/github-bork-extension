@@ -21,7 +21,7 @@ She wrote this comment in the chat:
 
 Of course, I replied:
 
-> Oh my god, I'm totally writing a browser extension to rename \`Fork8 to \`Bork!\` in GitHub
+> Oh my god, I'm totally writing a browser extension to rename \`Fork\` to \`Bork!\` in GitHub
 
 And promptly wrote this extension. It isn't pretty, it isn't even good code... I just wanted to have the Swedish chef saying "Bork" on GitHub from that moment on.
 
