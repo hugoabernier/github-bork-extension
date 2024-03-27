@@ -10,18 +10,21 @@
     },
     "manifest_version": 3,
     "permissions": [
-        "activeTab"
     ],
     "host_permissions": [
         "https://github.com/*"
     ],
     "content_scripts": [
         {
+            "run_at": "document_idle",
             "js": [
                 "borkify.js"
             ],
             "matches": [
                 "https://github.com/*"
+            ],
+            "exclude_matches": [
+                "https://*/login/*"
             ]
         }
     ]
